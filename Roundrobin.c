@@ -171,19 +171,9 @@ else
 			start1=add_to_ready(p,a,b);
 		}
 	}
-			/*struct Node *temp1=start1;
-			while(temp1!=NULL)
-			{
-				if(temp1->bur==0)
-				{
-					start1=deleteNode_ready(start1,temp1);
-				}
-				temp1=temp1->next;
-			}*/
 			struct Node *temp3=start1;
 			if(temp3->bur==0)
 			{
-				//printf("byee");
 				if(start1!=NULL)
 				start1=start1->next;
 			}
@@ -226,10 +216,8 @@ else
 			struct Node *temp6=start1;
 			while(temp6!=NULL)
 			{
-				printf("%d\t\t%d\t\t%d\n",temp6->pro,temp6->arri,temp6->bur);
 				temp6=temp6->next;
 			}
-			printf("hii\n");
 }
 search(p,a,b,1,q);
 }
@@ -287,7 +275,6 @@ if(start->bur>temp1->bur)
 if(temp1->bur-q<0)
 		{
 			add_to_result_list(temp1->arri,temp1->bur,temp1->pro);
-			printf("hii\n");
 			int e,f,g;
 			e=temp1->pro;
 			f=temp1->arri;
@@ -441,12 +428,6 @@ void selectionSort(int arri[],int pro[],int bur[], int n)
 	competion_time(q);
 	int comp[n];
 	find_completion_time(comp,n);
-	struct Node1 *temp1=head;
-	while(temp1!=NULL)
-	{
-		printf("%d\t\t%d\t\t%d\n",temp1->data,temp1->init,temp1->com);
-		temp1=temp1->next;
-	}
 double avg_tat=tat_find(tat,comp,arr,n);
 double avg_wt=wt_find(wt,burs,tat,n);
 double avg_w=(avg_wt/(double)n);
